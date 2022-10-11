@@ -4,7 +4,7 @@ import "fmt"
 
 func main() {
 	fmt.Println("================= Go ==================")
-
+	variables()
 }
 
 func variables() {
@@ -44,4 +44,8 @@ func variables() {
 
 	fmt.Printf("%v \n", s4 > s5)
 
+}
+
+func fn() {
+	fmt.Printf(" ")
 }

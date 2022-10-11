@@ -1,0 +1,1 @@
+/home/RHHLab/Bucket/Udemy/LetsGoRust/Rust/LetsGoRustB/target/debug/LetsGoRustB: /home/RHHLab/Bucket/Udemy/LetsGoRust/Rust/LetsGoRustB/src/main.rs /home/RHHLab/Bucket/Udemy/LetsGoRust/Rust/LetsGoRustB/src/variables.rs

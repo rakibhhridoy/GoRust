@@ -1,8 +1,12 @@
+
+
+
 fn main() {
 
     println!("============ LetsGetRusty =============");
 //    variables();
-    functions();
+//    functions();
+//    ownership()
 
 }
 
@@ -66,11 +70,57 @@ fn functions(){
         mass * GRAVITY * height  // better code
     }
     println!("The potential energy of a 3 kg object at height of 32m is {} joule",
-             p_energy(3.0, 32.0));
-
-
- 
-
-
+             p_energy(3.0, 32.0))
 }
+
+
+// ownership -- i) each value has a owner ii) only one owner iii) value get dropped if its owner goes out of scope
+
+fn ownership() {
+    {
+    /*    let s1 = String::from("abc");
+        let s2 = s1;
+        println!("{}", s1);
+
+        // to make a copy
+        let s1 = String::from("abc");
+        let s2 = s1.clone();
+        println!("{}", s1)
+
+
+    */
+    }
+    // let s1 = String::from("abc");
+    // stuff(s1);
+    // println!("{}",s1); // Error moved!
+
+    fn stuff(s: &String){
+        //
+    }
+
+    // refrencing and borrowing
+    let s2 = String::from("abc");
+    stuff(&s2);
+    println!("{}",s2);
+
+    // in mut variable and mut refrencing we can change the value
+     let mut s1 = String::from("abc");
+    do_stuff(&mut s1);
+
+    fn do_stuff(s: &mut String){
+        s.insert_str(0, "Hi, ");
+        println!("{}", s);
+        *s = String::from("Replacement"); // derefrencing (*s), change entire value *s
+        println!("{}", s);
+    }
+}
+
+
+// structs -- datafields, methods, associated functions
+/*
+    struct Something{
+        name: String::from("name"),
+        age : 15,
+    }
+ */
 
