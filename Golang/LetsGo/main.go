@@ -5,6 +5,7 @@ import "fmt"
 func main() {
 	fmt.Println("================= Go ==================")
 	variables()
+	autotest()
 }
 
 func variables() {
@@ -46,6 +47,18 @@ func variables() {
 
 }
 
-func fn() {
-	fmt.Printf(" ")
+func autotest() {
+	autot := "yes";
+	fmt.Printf("%v ", autot)
 }
+
+
+
+
+
+
+
+
+
+
+
